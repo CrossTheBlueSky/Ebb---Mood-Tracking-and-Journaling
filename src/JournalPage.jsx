@@ -1,6 +1,12 @@
 import React from "react"
+import {useLocation} from "react-router-dom"
 
 function JournalPage(){
+
+    const location = useLocation()
+    const entryId = location.state
+
+    console.log(entryId)
 
     return(
         <div>

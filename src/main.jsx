@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -10,7 +9,8 @@ import {
   useNavigate
 } from "react-router-dom";
 import Home from "./Home.jsx"
-import CalendarItem from "./CalendarItem.jsx"
+import CalendarPage from "./CalendarPage.jsx"
+import JournalPage from './JournalPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     path: "calendar",
     element:<div>
     <Link to="/preferences">Preferences</Link>
-    <CalendarItem />
+    <CalendarPage />
     </div>
   },
   {path: "preferences",
@@ -35,6 +35,10 @@ element:(
     <p>Preference Widget goes here Eventually</p>
     <Link to="/calendar">Back to Calendar</Link>
   </div>
+)},
+{path: "journal",
+element: (
+  <JournalPage />
 )}
 ]);
 
