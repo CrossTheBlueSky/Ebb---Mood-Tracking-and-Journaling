@@ -11,7 +11,7 @@
                 "color": "#F8EDCC"
                     },
             "title": "Big Things on the Way",
-            "image": "moving-truck-packed.jpg",
+            "image": "https://fastly.picsum.photos/id/349/800/600.jpg?hmac=yXis_8S0_ChJwH0c3ywuqHc1M1xr3kxNTbUUjr5rpiU",
             "entry": {
                 "text": "Can't believe I got this job in Denver! For once I feel excited about what's next for me",
                 "notes": [
@@ -21,20 +21,20 @@
                             },
                             {
                     "date": "Mar 1, 2040",
-                    "text": "Showed little Reina this picture today. Never noticed Alex off in the background. Wonder what he was up to that day"
+                    "text": "Showed little Cheryl this picture today. Never noticed Alex off in the background. Wonder what he was up to that day"
                             }
                         ]
                     }
                 },
                 {
-            "id": "December12023",
+            "id": "December202023",
             "date": "December 20, 2023",
             "mood": {
                 "name": "Lonely",
                 "color": "#301934"
                     },
             "title": "Big City, Small Me",
-            "image": "1500dollarshoebox.png",
+            "image": "https://fastly.picsum.photos/id/349/800/600.jpg?hmac=yXis_8S0_ChJwH0c3ywuqHc1M1xr3kxNTbUUjr5rpiU",
             "entry": {
                 "text": "Haven't made many friends yet. Coworkers are all out of town for the holidays. Friends from home are too busy to talk to me. So I'm spending Christmas alone in my tiny-ass apartment",
                 "notes": [
@@ -59,7 +59,7 @@
                 "color": "#000000"
                     },
             "title": "I'm a coward",
-            "image": "meandclaire.jpg",
+            "image": "https://fastly.picsum.photos/id/349/800/600.jpg?hmac=yXis_8S0_ChJwH0c3ywuqHc1M1xr3kxNTbUUjr5rpiU",
             "entry": {
                 "text": "Claire left for her dream job today. I wanted to see her off, but I couldn't. It hurts too much, and she looked so happy I didn't want to bring her down.",
                 "notes": [
@@ -82,7 +82,7 @@
                 "color": "#8B0000"
                     },
             "title": "Answering the Questions",
-            "image": "amtrack-STL-DEN-12221970.jpg",
+            "image": "https://fastly.picsum.photos/id/349/800/600.jpg?hmac=yXis_8S0_ChJwH0c3ywuqHc1M1xr3kxNTbUUjr5rpiU",
             "entry": {
                 "text": "I should have called ahead, sent a letter, done SOMETHING. But there's no turning back now. I have to see this through, even if it destroys me.",
                 "notes": [

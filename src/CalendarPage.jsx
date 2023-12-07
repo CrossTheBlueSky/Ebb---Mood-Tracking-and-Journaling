@@ -2,27 +2,23 @@ import React from "react"
 import CalendarItem from "./CalendarItem"
 import {useLocation} from "react-router-dom"
 import { data } from "jquery"
+import Nav from "./Nav"
 
 function CalendarPage(){
     const location = useLocation()
-    const userId = parseInt(location.state)
-    const [userData, setUserData] = React.useState({})
+    const [userData, setUserData] = React.useState(location.state.data)
+    console.log(userData)
 
-    React.useEffect(getData, [])
-
-     function getData(){
-     fetch(`http://localhost:3000/users/${userId}`)
-     .then(r=>r.json())
-     .then(data=>{
-        setUserData(data)
-         })
-
-    }
 
 
     
-           return userData.entryArr !== undefined ?  <CalendarItem entryArr={userData.entryArr}/> 
-            : <span>Loading Calendar...</span>
+           return (
+            <>
+            <Nav user={userData.name}/>
+            {userData.entryArr !== undefined ?  <CalendarItem entryArr={userData.entryArr}/>
+            : <span>Loading Calendar...</span>}
+            </>
+            )
 
 
  

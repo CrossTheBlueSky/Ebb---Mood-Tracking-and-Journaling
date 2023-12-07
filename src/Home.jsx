@@ -1,10 +1,13 @@
 import React from "react"
 import LoginCard from "./LoginCard"
 
-function Home(){
+function Home({appData}){
+    console.log(appData)
 
     return(
-        <LoginCard />
+        <div style={{width: "100vw", height: "100vh", backgroundImage: 'url("../public/writingdesk.jpg")', backgroundSize: "cover"}}>
+        <LoginCard appData={appData}/>   
+        </div>
     )
 
 }

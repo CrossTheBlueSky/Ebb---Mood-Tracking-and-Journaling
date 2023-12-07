@@ -31,8 +31,9 @@ function CalendarItem({entryArr}){
         const currentEntry = entryArr.filter((entry)=>{
             return entry.id === currentId
         })
+
         
-        navigate(`/journal`, {state: currentEntry})
+        navigate(`/journal`, {state: {currentEntry : currentEntry, date: currentDate}})
 
     }
 

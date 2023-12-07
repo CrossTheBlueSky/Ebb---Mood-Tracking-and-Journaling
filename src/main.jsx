@@ -6,42 +6,64 @@ import {
   RouterProvider,
   Route,
   Link,
-  useNavigate
+  Navigate
 } from "react-router-dom";
 import Home from "./Home.jsx"
 import CalendarPage from "./CalendarPage.jsx"
 import JournalPage from './JournalPage.jsx';
+import Customize from "./Customize.jsx"
+import Nav from "./Nav.jsx"
+
+function getData(){
+  fetch("http://localhost:3000/users")
+  .then(r=>r.json())
+  .then(data=>{
+    
+    createRoute(data)
+  })
+}
+getData()
+
+function createRoute(appData){
+
 
 const router = createBrowserRouter([
+
   {
-    path: "/",
-    element: (
+    path:"/",
+    element:(
       <div>
-        <Home />
-        <Link to="/calendar">Calendar</Link>
+         <Home appData={appData}/>
       </div>
-    ),
+    )
   },
   {
     path: "calendar",
-    element:<div>
-    <Link to="/preferences">Preferences</Link>
-    <CalendarPage />
+    element:(<>
+    <div id="calendar-container">
+      <CalendarPage />
     </div>
+    </>)
   },
-  {path: "preferences",
+  {path: "/customize",
 element:(
   <div>
-    <p>Preference Widget goes here Eventually</p>
-    <Link to="/calendar">Back to Calendar</Link>
+    <Customize />
   </div>
 )},
-{path: "journal",
+{path: "/journal",
 element: (
+  <>
+
   <JournalPage />
+  </>
 )}
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <RouterProvider router={router}>
+
+  </RouterProvider> 
 );
+
+}
