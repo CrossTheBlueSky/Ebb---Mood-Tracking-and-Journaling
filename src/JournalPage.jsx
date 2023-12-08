@@ -70,7 +70,7 @@ function JournalPage(){
 
 
     return(
-        <div className="mt-25 bg-secondary">
+        <div className="flex flex-col bg-secondary">
             {showNotes === false && <button className="btn btn-primary" onClick={()=>navigate("/calendar", {state: {userData: userData}})}>Back to Calendar</button>}
         <div>
             {showNotes ? <NotePage setShowNotes={setShowNotes} page={page} image={page.image} notes={page.entry.notes} userData={userData} />

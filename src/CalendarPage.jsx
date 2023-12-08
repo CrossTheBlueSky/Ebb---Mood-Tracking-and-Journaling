@@ -8,7 +8,6 @@ function CalendarPage(){
     // const [userData, setUserData] = React.useState(location.state.userData)
     const [userName, setUserName] = React.useState(location.state.userData.name)
 
-
     
            return (
             <>

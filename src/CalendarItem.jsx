@@ -1,29 +1,57 @@
 import React from "react"
 import Calendar from "react-calendar"
-import {useNavigate, useLocation} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 function CalendarItem({entries, userData}){
     const navigate = useNavigate()
-    const location = useLocation()
     const dayArr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     const monthArr = ["January", "February", "March", "April", "May", "June", 
     "July", "August", "September", "October", "November", "December"]
+    let colorObj= {}
     React.useEffect(()=>{
         entries.forEach((entry)=>{
             classMaker(entry.mood.color, entry.mood)
         })
     }, [])
 
-
-    console.log(entries)
-    
-
-    
+    function classChecker(className_){
+        
+        const styleSheets = window.document.styleSheets;
+        const styleSheetsLength = styleSheets.length;
+        for(let i = 0; i < styleSheetsLength; i++){
+            let classes =  styleSheets[i].cssRules;
+            if (!classes)
+                continue;
+            const classesLength = classes.length;
+            for (let x = 0; x < classesLength; x++) {
+                if (classes[x].selectorText == className_) {
+                    let ret;
+                    if(classes[x].cssText){
+                        ret = classes[x].cssText;
+                    } else {
+                        ret = classes[x].style.cssText;
+                    }
+                    if(ret.indexOf(classes[x].selectorText) == -1){
+                        ret = classes[x].selectorText + "{" + ret + "}";
+                    }
+                    return true
+                }
+            }
+        }
+        return false
+    }
 
     function classMaker(color, mood){
-        const style = document.createElement("style")
-        style.innerHTML = `.${mood.name} { background-color: ${color}; }`
-        document.getElementsByTagName('head')[0].appendChild(style)
+        const newMood = mood.name.toLowerCase().replace(/\s+/g, '')
+        if(classChecker(`.${newMood}`) === false){
+
+            const style = document.createElement("style")
+            style.innerHTML = `.${newMood} { background-color: ${color}; }`
+            document.getElementsByTagName('head')[0].appendChild(style)
+            colorObj[newMood] = color
+
+        }
+        else(console.log("mood already exists"))
 
     }
  
@@ -38,6 +66,9 @@ function CalendarItem({entries, userData}){
         const currentEntry = entries.filter((entry)=>{
             return entry.id === currentId
         })
+        const moodKey = currentEntry[0].mood.name.toLowerCase().replace(/\s+/g, '')
+
+        currentEntry[0].mood.color = colorObj[moodKey] || currentEntry[0].mood.color
 
         
         navigate(`/journal`, {state: {currentEntry : currentEntry, date: currentDate, userData: userData}})
@@ -57,7 +88,8 @@ function CalendarItem({entries, userData}){
         let newClass = ""
         entries.forEach((entry)=>{
             if(entry.id === dateString && view === "month"){
-                newClass = `${entry.mood.name}`
+                
+                newClass = `${entry.mood.name.toLowerCase().replace(/\s+/g, '')}`
             }
         })
 
