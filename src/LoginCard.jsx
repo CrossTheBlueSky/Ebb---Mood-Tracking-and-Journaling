@@ -21,7 +21,7 @@ function LoginCard({ appData }) {
               defaultValue=""
               onChange={(e) => {
                 navigate(`calendar/`, {
-                  state: { data: appData[e.target.value] },
+                  state: { userData : appData[e.target.value] },
                 });
               }}
             >

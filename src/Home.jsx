@@ -5,7 +5,7 @@ function Home({appData}){
     console.log(appData)
 
     return(
-        <div style={{width: "100vw", height: "100vh", backgroundImage: 'url("../public/writingdesk.jpg")', backgroundSize: "cover"}}>
+        <div style={{width: "85vw", height: "85vh", backgroundImage: 'url("../public/writingdesk.jpg")', backgroundSize: "cover"}}>
         <LoginCard appData={appData}/>   
         </div>
     )
