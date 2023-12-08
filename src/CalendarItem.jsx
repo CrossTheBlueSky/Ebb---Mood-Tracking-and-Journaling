@@ -66,9 +66,12 @@ function CalendarItem({entries, userData}){
         const currentEntry = entries.filter((entry)=>{
             return entry.id === currentId
         })
+        
+        if(currentEntry.length > 0){
         const moodKey = currentEntry[0].mood.name.toLowerCase().replace(/\s+/g, '')
 
         currentEntry[0].mood.color = colorObj[moodKey] || currentEntry[0].mood.color
+        }
 
         
         navigate(`/journal`, {state: {currentEntry : currentEntry, date: currentDate, userData: userData}})
