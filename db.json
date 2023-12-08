@@ -1,0 +1,146 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "name": "Claire Devereaux",
+      "entryArr": [
+        {
+          "id": "February12023",
+          "date": "February 1 2023",
+          "mood": {
+            "name": "Excited",
+            "color": "#F8EDCC"
+          },
+          "title": "Big Things on the Way",
+          "image": "https://fastly.picsum.photos/id/349/800/600.jpg?hmac=yXis_8S0_ChJwH0c3ywuqHc1M1xr3kxNTbUUjr5rpiU",
+          "entry": {
+            "text": "Can't believe I got this job in Denver! For once I feel excited about what's next for me",
+            "notes": [
+              {
+                "date": "Dec 1, 2035",
+                "text": "God I look so young here. Crazy to think this is the moment my whole life changed"
+              },
+              {
+                "date": "Mar 1, 2040",
+                "text": "Showed little Cheryl this picture today. Never noticed Alex off in the background. Wonder what he was up to that day"
+              }
+            ]
+          }
+        },
+        {
+          "id": "December202023",
+          "date": "December 20 2023",
+          "mood": {
+            "name": "Lonely",
+            "color": "#301934"
+          },
+          "title": "Big City, Small Me",
+          "image": "https://fastly.picsum.photos/id/349/800/600.jpg?hmac=yXis_8S0_ChJwH0c3ywuqHc1M1xr3kxNTbUUjr5rpiU",
+          "entry": {
+            "text": "Haven't made many friends yet. Coworkers are all out of town for the holidays. Friends from home are too busy to talk to me. So I'm spending Christmas alone in my tiny-ass apartment",
+            "notes": [
+              {
+                "date": "Oct 1, 2032",
+                "text": "I hated it then, but 1500 dollars for a place this close to city center would be a STEAL today"
+              }
+            ]
+          }
+        },
+        {
+          "id": "December132023",
+          "date": "December 13 2023",
+          "mood": {
+            "name": "dsa",
+            "color": "#8c1717"
+          },
+          "title": "New Title",
+          "image": "picsum.photos/800/600",
+          "entry": {
+            "text": "An Entry",
+            "notes": []
+          }
+        },
+        {
+          "id": "December142023",
+          "date": "December 14 2023",
+          "mood": {
+            "name": "lonely",
+            "color": "#1c0a75"
+          },
+          "title": "a title",
+          "image": "https://picsum.photos/800/600",
+          "entry": {
+            "text": "another netry",
+            "notes": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "name": "Alex Caldwell",
+      "entryArr": [
+        {
+          "id": "February12023",
+          "date": "February 1 2023",
+          "mood": {
+            "name": "Sad",
+            "color": "#000000"
+          },
+          "title": "I'm a coward",
+          "image": "https://fastly.picsum.photos/id/349/800/600.jpg?hmac=yXis_8S0_ChJwH0c3ywuqHc1M1xr3kxNTbUUjr5rpiU",
+          "entry": {
+            "text": "Claire left for her dream job today. I wanted to see her off, but I couldn't. It hurts too much, and she looked so happy I didn't want to bring her down.",
+            "notes": [
+              {
+                "date": "Jun 15 2023",
+                "text": "Why didn't I say anything? Why didn't I tell her how I feel. I hate this"
+              },
+              {
+                "date": "Mar 1 2035",
+                "text": "Even with how things turned out, I still cry when I think about this day."
+              }
+            ]
+          }
+        },
+        {
+          "id": "December222023",
+          "date": "December 22 2023",
+          "mood": {
+            "name": "Determined",
+            "color": "#8B0000"
+          },
+          "title": "Answering the Questions",
+          "image": "https://fastly.picsum.photos/id/349/800/600.jpg?hmac=yXis_8S0_ChJwH0c3ywuqHc1M1xr3kxNTbUUjr5rpiU",
+          "entry": {
+            "text": "I should have called ahead, sent a letter, done SOMETHING. But there's no turning back now. I have to see this through, even if it destroys me.",
+            "notes": [
+              {
+                "date": "Jan 1 2024",
+                "text": "I'm headed back home now. No, I'm headed back to St. Louis. Home is back in Denver. With Claire. The lease on her place ends at the end of the month. That'll give me enough time to get my things together and scrounge up the money to come back."
+              },
+              {
+                "date": "Jun 12 2037",
+                "text": "It's funny looking at this now. So many black rows, a single red day, and then green for a loooong time. Things really can just turn around sometimes."
+              }
+            ]
+          }
+        },
+        {
+          "id": "December152023",
+          "date": "December 15 2023",
+          "mood": {
+            "name": "Testy",
+            "color": "#7f9825"
+          },
+          "title": "Test",
+          "image": "https://picsum.photos/800/600",
+          "entry": {
+            "text": "this is a test for notes",
+            "notes": []
+          }
+        }
+      ]
+    }
+  ]
+}
