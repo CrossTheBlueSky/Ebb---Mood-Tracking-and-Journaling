@@ -7,7 +7,7 @@ function NotePage({image, notes, setShowNotes, userData, page}){
     const allNotes = noteArr.map((note)=>{
 
         return (
-            <NoteCard key={note.date} date={note.date} text={note.text} />
+            <NoteCard key={note.date} date={note.date} text={note.text} deleteHandler={deleteHandler} />
         )
     })
 
@@ -35,6 +35,26 @@ function NotePage({image, notes, setShowNotes, userData, page}){
         document.getElementById('note-form').reset()
         document.getElementById('add-note').close()
 
+    }
+
+    function deleteHandler(date){
+        console.log(date)
+        const entryIndex= userData.entryArr.findIndex((entry)=> entry.id === page.id)
+        const newArr = []
+        userData.entryArr[entryIndex].entry.notes.forEach((note)=>{
+            if(note.date !== date){
+                newArr.push(note)
+            }
+        })
+        userData.entryArr[entryIndex].entry.notes = newArr
+        setNoteArr(newArr)
+        fetch(`http://localhost:3000/users/${userData.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(userData)
+        })
     }
 
     
